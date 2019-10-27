@@ -1,5 +1,3 @@
-package task4;
-
 import java.util.Scanner;
 /*
 Задача №4: Отработка поразрядных операций
