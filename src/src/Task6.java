@@ -7,10 +7,6 @@
         4. Если полученное число больше 3, то вывести на экран сообщение "Программа выполнена корректно"
 */
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Task6 {
