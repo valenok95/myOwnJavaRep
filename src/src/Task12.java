@@ -7,11 +7,11 @@
 import java.util.Scanner;
 
 public class Task12 {
-        public static void main(String[] args) {
-            Scanner r = new Scanner(System.in);
-            String string = r.nextLine();
-            String formattedString = string.replaceAll(" ","");
-            System.out.println(formattedString);
-        }
+    public static void main(String[] args) {
+        Scanner r = new Scanner(System.in);
+        String string = r.nextLine();
+        String formattedString = string.replaceAll(" ", "");
+        System.out.println(formattedString);
     }
+}
 
