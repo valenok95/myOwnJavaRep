@@ -16,15 +16,13 @@ public class Task17 {
         Scanner scan = new Scanner(System.in);
         BufferedWriter writer = new BufferedWriter(new FileWriter("src\\resources\\test.txt"));
         //PrintWriter toTxtFile = new PrintWriter("src\\resources\\test.txt");
-        //writer.write("123");
-        String text;
-        do {
+        String text = "";
+        String stop = "stop";
+        while (text.equals(stop) == false) {
             text = scan.nextLine();
-            writer.write(text);
-        } while (text != "stop");
-
-        writer.close();// пробывал в цикл запихивать, ошибку выдаёт Exception in thread "main" java.io.IOException: Stream closed
+            writer.write(text + "\n");
+        }
+        writer.close();
     }
-
 }
 
