@@ -16,7 +16,7 @@ public class Task6 {
         double y = read.nextInt();
         double z = read.nextInt();
         System.out.println((x + y + z) / 3);
-        if (((x + y + z) / 3) / 2 > 3) {
+        if ( (int)((((x + y + z) / 3) / 2)) > 3) {
             System.out.println("Программа выполнена корректно");
         }
     }
