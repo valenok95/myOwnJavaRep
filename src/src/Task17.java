@@ -16,12 +16,20 @@ public class Task17 {
         Scanner scan = new Scanner(System.in);
         BufferedWriter writer = new BufferedWriter(new FileWriter("src\\resources\\test.txt"));
         //PrintWriter toTxtFile = new PrintWriter("src\\resources\\test.txt");
-        String text = "";
+        String text;
+        System.out.println("Чтобы закончить ввод, наберите слово stop");
         String stop = "stop";
-        while (text.equals(stop) == false) {
+        do {
             text = scan.nextLine();
-            writer.write(text + "\n");
-        }
+            switch (text) {
+                case "stop": {
+                    break;
+                }
+                default:{
+                    writer.write(text + "\n");
+                }
+            }
+        } while (text.equals(stop) != true);
         writer.close();
     }
 }
