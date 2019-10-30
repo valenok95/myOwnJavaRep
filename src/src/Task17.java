@@ -21,15 +21,14 @@ public class Task17 {
         String stop = "stop";
         do {
             text = scan.nextLine();
-            switch (text) {
-                case "stop": {
+            if (text.equals(stop)) {
                     break;
                 }
-                default:{
+                else {
                     writer.write(text + "\n");
                 }
-            }
-        } while (text.equals(stop) != true);
+
+        } while (!text.equals(stop));
         writer.close();
     }
 }
