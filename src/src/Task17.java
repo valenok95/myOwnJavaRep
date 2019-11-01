@@ -18,17 +18,17 @@ public class Task17 {
         //PrintWriter toTxtFile = new PrintWriter("src\\resources\\test.txt");
         String text;
         System.out.println("Чтобы закончить ввод, наберите слово stop");
-        String stop = "stop";
+        //String stop = "stop";
         do {
             text = scan.nextLine();
-            if (text.equals(stop)) {
+            if (text.equals("stop")) {
                     break;
                 }
                 else {
                     writer.write(text + "\n");
                 }
 
-        } while (!text.equals(stop));
+        } while (!text.equals("stop"));
         writer.close();
     }
 }
