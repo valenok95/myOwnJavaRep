@@ -4,12 +4,10 @@ package src;
         Для введенной с клавиатуры строки необходимо провести отсев пробелов.
         Результат в виде строки без пробелов вывести на экран.
 */
-import com.sun.org.apache.xpath.internal.operations.Equals;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class Task12StringBuffer {
     public static void main(String[] args) throws IOException {
