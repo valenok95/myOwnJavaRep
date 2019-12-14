@@ -36,7 +36,7 @@ public class ArrayListTaskHard {
             longer = list.get(i).length() > longer ? list.get(i).length() : longer;
         }
 
-       // System.out.println("Длина длинной короткой строки:"+longer);
+        // System.out.println("Длина длинной короткой строки:"+longer);
         for (int i = 0; i < list.size(); i++) {
             if (longer == list.get(i).length()) {
                 longerString = list.get(i);
@@ -52,7 +52,7 @@ public class ArrayListTaskHard {
         for (int i = 0; i < list.size(); i++) {
             shorter = list.get(i).length() < shorter ? list.get(i).length() : shorter; //получаем длину самой короткой строки
         }
-       // System.out.println("Длина самой короткой строки:"+shorter);
+        // System.out.println("Длина самой короткой строки:"+shorter);
         for (int j = 0; j < list.size(); j++) {
             if (shorter == list.get(j).length()) {
                 shorterString = list.get(j);
