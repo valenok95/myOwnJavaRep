@@ -33,3 +33,10 @@ public class Task17 {
     }
 }
 
+/*
+while (true)
+        {
+        String s = buffer.readLine();
+        if (s.equals("exit"))
+        break;
+        }*/
