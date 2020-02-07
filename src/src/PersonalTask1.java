@@ -28,9 +28,10 @@ public class PersonalTask1 {
         int result = 1;
         if (exp == 0 & number != 0) {
             return 1;
-        } else if (number == 0) {
-            return 0;
-        } else {
+        }
+         else if (number == 0) {
+            return 0;}
+        else {
             for (int i = 0; i < exp; i++) {
                 result *= number;
             }
