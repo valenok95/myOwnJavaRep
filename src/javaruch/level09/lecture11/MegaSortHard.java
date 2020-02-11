@@ -2,31 +2,11 @@ package javaruch.level09.lecture11;
 /**
  * Задача: Пользователь вводит с клавиатуры список слов (и чисел).
  * Слова вывести в возрастающем порядке, числа - в убывающем.
- *
- * Пример ввода:
- * Вишня
- * 1
- * Боб
- * 3
- * Яблоко
- * 22
- * 0
- * Арбуз
- *
- * Пример вывода:
- * Арбуз
- * 22
- * Боб
- * 3
- * Вишня
- * 1
- * 0
- * Яблоко
  */
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.util.*;
 
 public class MegaSortHard {
     public static void main(String[] args) throws Exception {
@@ -50,39 +30,35 @@ public class MegaSortHard {
     }
 
     public static void sort(String[] array) {
-        String tmp;
-        int count=0;
+        Set stringSet = new TreeSet();
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        List<String> firstList = Arrays.asList(array);
+        for (String element : firstList) // разносим массив в сет и лист
+        {
+            if (isNumber(element)) {
+                numbers.add(Integer.parseInt(element)); // если число - в лист чисел
+            } else {
+                stringSet.add(element); // если слово - в сет стрингов
+            }
+        }
+        Collections.sort(numbers);
+        Collections.reverse(numbers); // разворачиваем по убыванию
+
+        ArrayList<String> resultList = new ArrayList<>();
+        for (Object e : stringSet) {
+            resultList.add(e.toString());
+        }
+        for (Integer e : numbers)
+        {
+            resultList.add(e.toString());
+        }
         for(int i=0;i<array.length;i++)
-            for (int j=i;j>0;j--)
-            {
-                if (isNumber(array[j-1]))
-                {
-                    tmp = array[j];
-                    array[j]=array[j-1];
-                    array[j-1]=tmp;
-                }
-            }
-        for(int i=0;i<array.length;i++) {
-            String tmp2 ;
-            while (!isNumber(array[i+1])) {
-                if (isGreaterThan(array[i], array[i + 1])) {
-                    tmp2 = array[i];
-                    array[i] = array[i + 1];
-                    array[i + 1] = tmp2;
-                }
-                i++;
-            }
-                count = i;
-                break;
+        {
+            array[i]=resultList.get(i);
         }
-        for(int i=array.length-1;i>count+1;i--)
-           for (int j = i; j > 0 && Integer.parseInt(array[j])<=Integer.parseInt(array[j-1]); j--)
-            {
-                tmp = array[j];
-                array[i]=array[j-1];
-                array[j-1]=tmp;
-            }
-        }
+        isGreaterThan("A","b"); // не пригодился, благодаря ThreeSet'у!
+
+    }
 
 
     // Метод для сравнения строк: 'а' больше чем 'b'
