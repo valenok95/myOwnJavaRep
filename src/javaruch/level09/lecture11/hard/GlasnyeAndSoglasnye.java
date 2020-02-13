@@ -1,4 +1,4 @@
-package javaruch.level09.lecture11;
+package javaruch.level09.lecture11.hard;
 /**
  * Написать программу, которая вводит с клавиатуры строку текста.
  * Программа должна вывести на экран две строки:

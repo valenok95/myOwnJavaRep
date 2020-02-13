@@ -1,4 +1,4 @@
-package javaruch.level09.lecture11;
+package javaruch.level09.lecture11.hard;
 /**
  * Задача: Пользователь вводит с клавиатуры список слов (и чисел).
  * Слова вывести в возрастающем порядке, числа - в убывающем.
@@ -57,7 +57,6 @@ public class MegaSortHard {
             array[i]=resultList.get(i);
         }
         isGreaterThan("A","b"); // не пригодился, благодаря ThreeSet'у!
-
     }
 
 
