@@ -1,6 +1,6 @@
 package truckStory;
 
-import javax.imageio.plugins.tiff.BaselineTIFFTagSet;
+
 
 public class Action {
 
