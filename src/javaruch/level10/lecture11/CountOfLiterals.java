@@ -41,14 +41,13 @@ public class CountOfLiterals {
         }
 
         for (Map.Entry pair : resultMap.entrySet()) {
-            if (pair.getKey().toString().equals("ё"))
+            if (pair.getKey().equals('ё'))
             {
                 break;
             } else
             System.out.println(pair.getKey() + " " + pair.getValue());
-            if(pair.getKey().toString().equals("е")){
-                char c="ё".charAt(0);
-                int yoCount = resultMap.get(c);
+            if(pair.getKey().equals('е')){
+                int yoCount = resultMap.get('ё');
                 System.out.println("ё " + yoCount);
             }
 
